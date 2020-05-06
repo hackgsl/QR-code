@@ -29,14 +29,14 @@ namespace 二维码生成解析工具
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnToQR_Click(object sender, EventArgs e)
         {
             try
             {
-                if (checkBox1.Checked)
+                if (ccbBatch.Checked)
                 {
                     Regex re = new Regex(@"\r\n");//分割回车符
-                    string[] method = re.Split(textBox1.Text);
+                    string[] method = re.Split(txtString.Text);
                     foreach (var i in method)
                     //for (int i = 0; i < method.GetLength(0); i++)
                     {
@@ -47,10 +47,14 @@ namespace 二维码生成解析工具
                 }
                 else
                 {
-                    Image img = QRCodeBimapForString(textBox1.Text);
+                    Image img = QRCodeBimapForString(txtString.Text);
                     if (img != null)
                     {
-                        this.pictureBox1.Image = img;
+                        this.pictureBoxQR.Image = img;
+                        if (ccbCopy.Checked)
+                        {
+                            Clipboard.SetImage(pictureBoxQR.Image);
+                        }
                     }
                 }
 
@@ -61,12 +65,12 @@ namespace 二维码生成解析工具
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSaveQR_Click(object sender, EventArgs e)
         {
             try
             {
 
-                QRCodeSave(textBox1.Text);
+                QRCodeSave(txtString.Text);
             }
             catch (Exception)
             {
@@ -75,7 +79,7 @@ namespace 二维码生成解析工具
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnCodeQR_Click(object sender, EventArgs e)
         {
             try
             {
@@ -89,7 +93,7 @@ namespace 二维码生成解析工具
                 if (dialog.ShowDialog() != DialogResult.OK) return;
                 var fileName = dialog.FileName;
 
-                textBox1.Text = DeCode(fileName);
+                txtString.Text = DeCode(fileName);
 
             }
             catch (Exception ex3)
@@ -98,17 +102,17 @@ namespace 二维码生成解析工具
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnPasteQR_Click(object sender, EventArgs e)
         {
             try
             {
                 if (!Clipboard.ContainsImage()) return;//判断剪切板中是否复制了图片
                 var imgClip = Clipboard.GetImage();
 
-                pictureBox1.Image = imgClip;//粘贴图片
+                pictureBoxQR.Image = imgClip;//粘贴图片
                 if (imgClip == null) return;
                 Bitmap map = new Bitmap(imgClip);
-                textBox1.Text = new QRCodeDecoder().decode(new QRCodeBitmapImage(map));//解析二维码
+                txtString.Text = new QRCodeDecoder().decode(new QRCodeBitmapImage(map));//解析二维码
             }
             catch (Exception ex4)
             {

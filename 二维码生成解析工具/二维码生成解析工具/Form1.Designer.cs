@@ -28,108 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnToQR = new System.Windows.Forms.Button();
+            this.txtString = new System.Windows.Forms.TextBox();
+            this.btnSaveQR = new System.Windows.Forms.Button();
+            this.btnCodeQR = new System.Windows.Forms.Button();
+            this.btnPasteQR = new System.Windows.Forms.Button();
+            this.pictureBoxQR = new System.Windows.Forms.PictureBox();
+            this.ccbBatch = new System.Windows.Forms.CheckBox();
+            this.ccbCopy = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQR)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnToQR
             // 
-            this.button1.Location = new System.Drawing.Point(90, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "生成二维码";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnToQR.Location = new System.Drawing.Point(135, 121);
+            this.btnToQR.Name = "btnToQR";
+            this.btnToQR.Size = new System.Drawing.Size(75, 23);
+            this.btnToQR.TabIndex = 0;
+            this.btnToQR.Text = "生成二维码";
+            this.btnToQR.UseVisualStyleBackColor = true;
+            this.btnToQR.Click += new System.EventHandler(this.btnToQR_Click);
             // 
-            // textBox1
+            // txtString
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtString.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(8, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(408, 122);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "52破解\r\nby hackgsl";
+            this.txtString.Location = new System.Drawing.Point(8, 4);
+            this.txtString.Multiline = true;
+            this.txtString.Name = "txtString";
+            this.txtString.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtString.Size = new System.Drawing.Size(346, 111);
+            this.txtString.TabIndex = 1;
+            this.txtString.Text = "52破解\r\nby hackgsl";
             // 
-            // button2
+            // btnSaveQR
             // 
-            this.button2.Location = new System.Drawing.Point(171, 133);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "保存二维码";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSaveQR.Location = new System.Drawing.Point(216, 121);
+            this.btnSaveQR.Name = "btnSaveQR";
+            this.btnSaveQR.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveQR.TabIndex = 2;
+            this.btnSaveQR.Text = "保存二维码";
+            this.btnSaveQR.UseVisualStyleBackColor = true;
+            this.btnSaveQR.Click += new System.EventHandler(this.btnSaveQR_Click);
             // 
-            // button3
+            // btnCodeQR
             // 
-            this.button3.Location = new System.Drawing.Point(252, 133);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "解析二维码";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCodeQR.Location = new System.Drawing.Point(135, 150);
+            this.btnCodeQR.Name = "btnCodeQR";
+            this.btnCodeQR.Size = new System.Drawing.Size(75, 23);
+            this.btnCodeQR.TabIndex = 3;
+            this.btnCodeQR.Text = "解析二维码";
+            this.btnCodeQR.UseVisualStyleBackColor = true;
+            this.btnCodeQR.Click += new System.EventHandler(this.btnCodeQR_Click);
             // 
-            // button4
+            // btnPasteQR
             // 
-            this.button4.Location = new System.Drawing.Point(333, 133);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "粘贴二维码";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnPasteQR.Location = new System.Drawing.Point(216, 150);
+            this.btnPasteQR.Name = "btnPasteQR";
+            this.btnPasteQR.Size = new System.Drawing.Size(75, 23);
+            this.btnPasteQR.TabIndex = 4;
+            this.btnPasteQR.Text = "粘贴二维码";
+            this.btnPasteQR.UseVisualStyleBackColor = true;
+            this.btnPasteQR.Click += new System.EventHandler(this.btnPasteQR_Click);
             // 
-            // pictureBox1
+            // pictureBoxQR
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBoxQR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 162);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(408, 368);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxQR.Location = new System.Drawing.Point(2, 180);
+            this.pictureBoxQR.Name = "pictureBoxQR";
+            this.pictureBoxQR.Size = new System.Drawing.Size(361, 359);
+            this.pictureBoxQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxQR.TabIndex = 5;
+            this.pictureBoxQR.TabStop = false;
             // 
-            // checkBox1
+            // ccbBatch
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 137);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 16);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "批量生成";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ccbBatch.AutoSize = true;
+            this.ccbBatch.Location = new System.Drawing.Point(45, 125);
+            this.ccbBatch.Name = "ccbBatch";
+            this.ccbBatch.Size = new System.Drawing.Size(72, 16);
+            this.ccbBatch.TabIndex = 6;
+            this.ccbBatch.Text = "批量生成";
+            this.ccbBatch.UseVisualStyleBackColor = true;
+            // 
+            // ccbCopy
+            // 
+            this.ccbCopy.AutoSize = true;
+            this.ccbCopy.Location = new System.Drawing.Point(45, 154);
+            this.ccbCopy.Name = "ccbCopy";
+            this.ccbCopy.Size = new System.Drawing.Size(84, 16);
+            this.ccbCopy.TabIndex = 7;
+            this.ccbCopy.Text = "生成时复制";
+            this.ccbCopy.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 542);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.MinimumSize = new System.Drawing.Size(413, 581);
+            this.ClientSize = new System.Drawing.Size(364, 541);
+            this.Controls.Add(this.ccbCopy);
+            this.Controls.Add(this.ccbBatch);
+            this.Controls.Add(this.pictureBoxQR);
+            this.Controls.Add(this.btnPasteQR);
+            this.Controls.Add(this.btnCodeQR);
+            this.Controls.Add(this.btnSaveQR);
+            this.Controls.Add(this.txtString);
+            this.Controls.Add(this.btnToQR);
+            this.MinimumSize = new System.Drawing.Size(380, 580);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "二维码生成解析工具 by hackgsl 52pojie.cn";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,13 +149,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnToQR;
+        private System.Windows.Forms.TextBox txtString;
+        private System.Windows.Forms.Button btnSaveQR;
+        private System.Windows.Forms.Button btnCodeQR;
+        private System.Windows.Forms.Button btnPasteQR;
+        private System.Windows.Forms.PictureBox pictureBoxQR;
+        private System.Windows.Forms.CheckBox ccbBatch;
+        private System.Windows.Forms.CheckBox ccbCopy;
     }
 }
 
