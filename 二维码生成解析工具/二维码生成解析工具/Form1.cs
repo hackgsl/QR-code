@@ -7,6 +7,7 @@
  * =================================*/
 using System;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -132,7 +133,7 @@ namespace 二维码生成解析工具
             QRCodeEncoder qrCodeEncoder = new QRCodeEncoder
             {
                 QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE,//编码方式(注意：BYTE能支持中文，ALPHA_NUMERIC扫描出来的都是数字)
-                QRCodeScale = 8,//大小(值越大生成的二维码图片像素越高)
+                QRCodeScale = int.Parse(numericUpDown1.Value.ToString(CultureInfo.InvariantCulture)),//大小(值越大生成的二维码图片像素越高)
                 QRCodeVersion = 0,//版本(注意：设置为0主要是防止编码的字符串太长时发生错误)
                 QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.M//错误效验、错误更正(有4个等级)
             };
